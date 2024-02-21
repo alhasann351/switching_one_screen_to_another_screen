@@ -10,8 +10,17 @@ class Person extends StatefulWidget {
 class _PersonState extends State<Person> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body:  Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Person',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: const Center(
         child: Text(
           'Person Page',
           style: TextStyle(

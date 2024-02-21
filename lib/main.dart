@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:switching_one_screen_to_another_screen/pages/Favorite.dart';
+import 'package:switching_one_screen_to_another_screen/pages/dashboard.dart';
+import 'package:switching_one_screen_to_another_screen/pages/person.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,11 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
               width: 250,
               child: ElevatedButton(
                 onPressed: () {
-
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Person(),
+                    ),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF190482)
-                ),
+                    backgroundColor: const Color(0xFF190482)),
                 child: const Text(
                   'View Person Page',
                   style: TextStyle(
@@ -60,15 +67,50 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            const SizedBox(height: 10,),
+            const SizedBox(
+              height: 10,
+            ),
             SizedBox(
               height: 55,
               width: 280,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Favorite(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF190482)
+                    backgroundColor: const Color(0xFF190482)),
+                child: const Text(
+                  'View Favorite Page',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
                 ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              height: 55,
+              width: 290,
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const DashBoard(),
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF190482)),
                 child: const Text(
                   'View DashBoard Page',
                   style: TextStyle(

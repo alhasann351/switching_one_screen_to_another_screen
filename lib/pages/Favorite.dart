@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({super.key});
+class Favorite extends StatefulWidget {
+  const Favorite({super.key});
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<Favorite> createState() => _FavoriteState();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _FavoriteState extends State<Favorite> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'DashBoard',
+          'Favorite',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
@@ -22,7 +22,7 @@ class _DashBoardState extends State<DashBoard> {
       ),
       body: const Center(
         child: Text(
-          'DashBoard Page',
+          'Favorite Page',
           style: TextStyle(
             fontSize: 25,
             fontWeight: FontWeight.bold,
